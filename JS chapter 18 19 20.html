@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+        
+        var courses = [];
+        for (var i=0; i<=4;i++)
+        {
+        courses[i] = prompt("Enter Course Name", i);
+        courses.push(courses[i]);
+        }
+        alert(courses);
+
+        for (var i=0; i<=4;i++)
+        {
+        courses.splice(i,1,prompt("Course",courses[i]));
+        }
+        alert(courses);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
