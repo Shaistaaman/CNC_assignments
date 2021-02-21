@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+      function capitalizeFirstLetter(string) {
+        var result
+        var arr =string.split(" ");
+        for(var i=0; i<arr.length; i++)
+        {
+          arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase();
+          
+        }
+        return arr.join(' ');
+      }
+      var inputValue="cloUd naTive computinG";
+      var newInput =capitalizeFirstLetter(inputValue);
+      console.log(newInput);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
