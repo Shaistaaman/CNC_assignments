@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+        
+         
+        var name = prompt("Enter name");
+        var birthDate = parseInt(prompt("Enter date"));
+        var birthMonth = parseInt(prompt("Enter month") - 1);
+        var birthYear = parseInt(prompt("Enter year"));
+       
+        var todayDate = new Date();
+        var birthday = new Date(birthYear,birthMonth,birthDate);
+
+        var perDay = 1000 * 60 * 60 * 24; 
+        var perHour = 1000 * 60 * 60;
+
+        var dateDif = todayDate - birthday;
+
+        var age = todayDate.getFullYear() - birthday.getFullYear();
+        var days = Math.round(dateDif / perDay);
+        var hours = Math.round(dateDif / perHour);
+
+        var greet = "";
+        var hour = todayDate.getHours();
+        
+
+    if(hour >= 0 && hour <= 12)
+    greet = "Good Morning !"
+    else if(hour == 12)
+    greet = "Good Noon !"
+    else if(hour >= 12 &&  hour <= 17)
+    greet = "Good After noon !"
+    else greet = " Good Evening !"
+
+    console.log(`Hello ${name}, ${greet}`);
+    console.log(`Your DOB is ${birthday}`);
+    console.log(`You are ${age} years old.`);
+    console.log(`Your age in days: ${days}`);
+    console.log(`Your age in hours: ${hours}`);
+
+    var birthday = new Date(todayDate.getFullYear(), birthMonth, birthDate);
+if (todayDate.getMonth() == birthMonth && todayDate.getDate() > birthDate) {
+    birthday.setFullYear(birthday.getFullYear() + 1);
+}
+
+if (todayDate.getMonth() == birthMonth && todayDate.getDate() == birthDate) {
+    console.log(`Happy Birthday ${name}!`);
+} else {
+    console.log(Math.ceil((birthday.getTime() - todayDate.getTime()) / (perDay)) + " days left until your birthday!");
+} 
+
+</script>   
+</head>
+<body>
+    
+</body>
+</html>
