@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+        
+    var number = parseInt(prompt('Enter a number: '));
+
+    // negative number check
+    if (number < 0) {
+        console.log('Negative number factorial does not exist.');
+    }
+
+    //  0 check
+    else if (number === 0) {
+        console.log(`The factorial of ${number} is 1.`);
+    }
+
+    // Positive number
+    else {
+        let factorial = 1;
+        for (i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        console.log(`The factorial of ${number} is ${factorial}.`);
+}    
+       
+    </script>   
+    </head>
+    <body>
+        
+    </body>
+</html>

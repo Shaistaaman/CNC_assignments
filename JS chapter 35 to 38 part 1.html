@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+
+
+        function capitalize(inputValue) {
+            if ((inputValue === null) || (inputValue === ''))
+            return false;
+
+            else 
+            return inputValue.toLowerCase().split(' ').map(
+            function (item) {
+                return item.replace(item[0], item[0].toUpperCase());
+            }).join(' ');
+        }
+
+
+        var inputValue = prompt("Please enter any sentence:");
+        inputValue = capitalize(inputValue);       
+        console.log(inputValue);
+   
+    </script>   
+    </head>
+    <body>
+        
+    </body>
+</html>
