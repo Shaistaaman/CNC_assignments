@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+//   Get the 5-course number from the userfor example course1 is 70 var totalMarks = 500
+// Calculate the total percentage formula: obtainedMarks * 100/ totalMarks
+// Calculate the grade use switch case Grade A+ 90% to 100% , Grade A 75% to 89% , Grade B 60% to 74% , Grade C 45% to 60% , Grade D 30% to 44% Grade F 0% to 29%
+// print output in alert.       
+
+var totalMarks = 500
+var courses = [];
+        for (var i=0; i <= 4; i++)
+        {
+        courses[i] = parseInt(prompt("Enter Course Number"));
+        if (courses.length <= 4) {
+        courses.push(courses[i]);
+        }
+        }
+       console.log(courses)
+       
+        var obtainedMarks = courses.reduce((a, b) => a + b , 0); 
+       console.log(obtainedMarks)
+
+        var totalPercentage = parseInt(obtainedMarks * 100 / totalMarks);
+       console.log(totalPercentage)
+
+     switch(totalPercentage)
+     {
+         case ((totalPercentage >= 90 && totalPercentage <= 100) ? totalPercentage : 1):
+         alert('A+');
+         break;
+
+         case ((totalPercentage >= 75 && totalPercentage <= 89) ? totalPercentage : 2):
+         alert('A');
+         break;
+
+         case ((totalPercentage >= 61 && totalPercentage <= 74) ? totalPercentage : 3):
+         alert('B');
+         break;
+
+         case ((totalPercentage >= 45 && totalPercentage <= 60) ? totalPercentage : 4):
+         alert('C');
+         break;
+
+         case ((totalPercentage >= 30 && totalPercentage <= 44) ? totalPercentage : 5):
+         alert('D');
+         break;
+
+         case ((totalPercentage >= 0 && totalPercentage <= 29) ? totalPercentage : 6):
+         alert('F');
+         break;
+
+         default:
+             alert('No Grade')
+             break;
+     }
+          
+    </script>   
+    </head>
+    <body>
+        
+    </body>
+</html>
